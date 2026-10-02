@@ -6,5 +6,4 @@
 
 ``` text
 1. MOSTRAR "Bienvenido a mi programa"
-
 ```

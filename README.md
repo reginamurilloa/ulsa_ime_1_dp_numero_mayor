@@ -5,58 +5,59 @@
 ## 1. Descripción del problema (Fase 1)
 <!-- Explica con tus palabras qué hace tu programa y para qué serviría en la vida real. Máximo 4 líneas. -->
 
-_____
+Identificar valores mayores al realizar medidas como de algun dispositivo
 
 ## 2. Entradas y salidas (Fase 1)
 <!-- Define cada entrada y cada salida, con su tipo de dato y su objetivo. -->
 
 **Entradas:**
-1. _____
-2. _____
-3. _____
+1. valor 1
+2. valor 2
+3. valor 3
 
 **Salida:**
-1. _____
+1. que número es mayor de los 3 anteriores
 
 **¿Muestro el valor del mayor o cuál de los tres fue (primero, segundo o tercero)? ¿Por qué?**
-_____
+
+Muestro el valor del mayor, porque eso responde qué medida es la más grande. 
 
 **¿Qué función de `utilerias.h` uso para leer los números? ¿Por qué esa y no la otra?**
-_____
+Uso leerDecimal, porque acepta enteros y decimales, que aparecen en los casos de prueba. 
 
 ## 3. Restricciones e invariante (Fases 1 y 2)
 
 **Restricciones** (¿qué debe cumplirse?):
-- _____
-- _____
+- Se deben ingresar tres valores 
+- Se permiten valores positivos, negativos y decimales.
 
 **¿Hace falta validar el rango de los números (por ejemplo, rechazar el 0 o los negativos)? ¿Por qué?**
-_____
+puedo poner una restricción para que marqeu error con eso
 
 **¿Qué hace mi programa cuando dos números son iguales y son los mayores? ¿Y cuando los tres son iguales?**
-_____
+Muestra el valor mayor. Si dos números empatan en el mayor, muestra ese valor una sola vez; si los tres son iguales, muestra ese mismo valor.
 
 **¿Quién detecta cada error?** (¿qué revisa la función de `utilerias.h` y qué reviso yo?)
-_____
+leerDecimal detecta texto, entradas y números que no puede convertir, y vuelve a pedir el dato. 
 
 **Invariante** (justo antes de mostrar el resultado, ¿qué es seguro sobre el valor que voy a mostrar?):
-_____
+El valor que voy a mostrar es uno de los tres números ingresados y es mayor o igual que los otros dos.
 
 ## 4. Casos resueltos a mano (Fase 1)
 
 | Caso | Número 1 | Número 2 | Número 3 | Mayor calculado a mano |
 |---|---|---|---|---|
-| 1 (el mayor en primera posición) | _____ | _____ | _____ | _____ |
-| 2 (el mayor en segunda posición) | _____ | _____ | _____ | _____ |
-| 3 (el mayor en tercera posición) | _____ | _____ | _____ | _____ |
-| 4 (con un empate) | _____ | _____ | _____ | _____ |
-| 5 (con negativos) | _____ | _____ | _____ | _____ |
+| 1 (el mayor en primera posición) | 8 | 5 | 3 | 8 |
+| 2 (el mayor en segunda posición) | 3 | 8 | 5 | 8 |
+| 3 (el mayor en tercera posición) | 3 | 5 | 8 | 8 |
+| 4 (con un empate) | 7 | 7 | 3 | 7 |
+| 5 (con negativos) | -4 | -1 | -9 | -1 |
 
 ## 5. Receta en pseudocódigo (Fase 2)
 <!-- Tu receta va en el archivo RECETA.md. Aquí solo responde las preguntas. -->
 
-**¿Probé mi receta a mano con mis 5 casos?** Sí / No
-**¿Tuve que corregirla? ¿Qué cambié?** _____
+**¿Probé mi receta a mano con mis 5 casos?** Sí/No
+**¿Tuve que corregirla? ¿Qué cambié?** 
 **¿Cuántas versiones de mi receta escribí hasta la final?** _____
 **¿Se me ocurrió otra forma de resolver el problema? ¿Cuál? ¿Por qué elegí la que usé?**
 _____
