@@ -37,8 +37,6 @@ int main() {
         numero3 = leerDecimal("Escribe el tercer número: ");
     }
 
-    int opcion = 0;
-
     // Paso 5
     if (numero1 > numero2 && numero1 > numero3) {
         opcion = 1;

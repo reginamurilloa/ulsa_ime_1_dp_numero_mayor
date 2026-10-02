@@ -85,78 +85,73 @@ Hay empate en el valor mayor. No se acepta.
 
 | Paso de la receta | Instrucción de C++ que lo implementa |
 |---|---|
-| 1. Mensaje de bienvenida | _____ |
-| _____ | _____ |
-| _____ | _____ |
-| _____ | _____ |
-| _____ | _____ |
+| 1. Mensaje de bienvenida | std::cout << "Bienvenido a mi programa\n" |
+| 2. Leer el primer número | numero1 = leerDecimal("Escribe el primer número: "); y el while que lo vuelve a pedir si es negativo |
+| 3. Leer el segundo número | numero2 = leerDecimal("Escribe el segundo número: "); y su while  |
+| 4. Leer el tercer número | numero3 = leerDecimal("Escribe el tercer número: "); y su while  |
+| 5–7. Encontrar cuál es el único mayor | if / else if / else compara los números  |
+| 8. Mostrar el resultado o el empate | switch (opcion) elige un case; cada break termina ese caso |
 
 **¿Hubo algún paso de mi receta que me costó traducir a C++? ¿Cuál y por qué?**
-_____
+Sí, el paso de mostrar el resultado, porque primero tuve que asignar una opción entera según cuál número era mayor. 
 
 ## 9. Experimentos (Fase 3)
 
 **Experimento A: ¿qué te dijo el compilador con `if (a > b > c)`? ¿Qué mostró el programa con 3, 2 y 1? ¿Por qué?**
-_____
+La expresion marca como valida, aunque podria expresarse de otra manera para que el codigo se lleve a cabo de la mejor manera 
 
 **Experimento B: al cambiar `>=` por `>` (o al revés), ¿qué mostró el programa con 7, 7, 3 y con 5, 5, 5? ¿Por qué?**
-_____
-
-**Experimento C (opcional): con `if (a = b)`, ¿qué te dijo el compilador? ¿Qué le pasó al valor de `a`?**
-_____
+Con los dos casos se crea un empate. Con >= acepta el empate y muestra 7 para y en el caso 2, muestra el 5.  El > detecta al numero mayor aunque algunos terminos se repitan
 
 ## 10. Tabla de pruebas (Fase 4)
 
 | Caso | Entradas | Esperado | Obtenido | ¿Pasó? |
 |---|---|---|---|---|
-| Mayor primero | 9, 4, 2 | 9 | _____ | _____ |
-| Mayor en medio | 4, 9, 2 | 9 | _____ | _____ |
-| Mayor al final | 2, 4, 9 | 9 | _____ | _____ |
-| Empate arriba (1.º y 2.º) | 7, 7, 3 | 7 | _____ | _____ |
-| Empate arriba (1.º y 3.º) | 7, 3, 7 | 7 | _____ | _____ |
-| Empate abajo | 8, 3, 3 | 8 | _____ | _____ |
-| Los tres iguales | 5, 5, 5 | 5 | _____ | _____ |
-| Todos negativos | -4, -1, -9 | -1 | _____ | _____ |
-| Con cero | -2, 0, -5 | 0 | _____ | _____ |
-| Decimales cercanos | 2.5, 2.7, 2.6 | 2.7 | _____ | _____ |
-| Texto | `abc` (luego 3), 1, 2 | vuelve a pedir el dato; 3 | _____ | _____ |
-| Caso propio 1 | _____ | _____ | _____ | _____ |
-| Caso propio 2 | _____ | _____ | _____ | _____ |
+| Mayor primero | 9, 4, 2 | 9 | 9 |si |
+| Mayor en medio | 4, 9, 2 | 9 | 9 | si |
+| Mayor al final | 2, 4, 9 | 9 | 9 | si |
+| Empate arriba (1.º y 2.º) | 7, 7, 3 | No se puede ejecutar porque hay un empate |No da resultado porque se repiten terminos| si |
+| Empate arriba (1.º y 3.º) | 7, 3, 7 |No se puede ejecutar porque hay un empate | No da resultado| si
+| Empate abajo | 8, 3, 3 | 8 | 8 | si|
+| Los tres iguales | 5, 5, 5 | No se puede ejecutar por que todos son iguales | No da resultado | si |
+| Rechaza negativos | -4 (luego 4), 1, 2 | vuelve a pedir el primer numero por que es negativo| 4| si |
+| Con cero | 0, 2, 1 | 2 | 2 | si|
+| Decimales cercanos | 2.5, 2.7, 2.6 | 2.7 | 2.7 | si|
+| Texto | `abc` (luego 3), 1, 2 | pide que escribas un numero| 3| si|
+| Caso propio 1 | 0, 1.5, 1 | 1.5 |1.5 | si|
+| Caso propio 2 | 8, 2, 1 | 8| 8| si |
 
 ## 11. Bitácora de mejoras (Fase 4)
 
 | # | ¿Qué falló o qué quise mejorar? | ¿Qué cambié? | ¿Funcionó? |
 |---|---|---|---|
-| 1 | _____ | _____ | _____ |
-| 2 | _____ | _____ | _____ |
-
-**Reto elegido (opcional):** _____
+| 1 |se me dificulto la parte de que analizara que numeros era mayores, y que si dos eran iguales mandar un empate y que no los aceptara | busque opciones de como ejecutar el codigo|si
 
 ## 12. Dudas para el profesor (Fase 3)
 
 | Duda | Lo que ya intenté |
 |---|---|
-| _____ | _____ |
+| ninguna |   |
 
 ## 13. Reflexión final
 
 **¿Qué aprendí con esta práctica?**
-_____
+Como ejecutar completamente la receta y el codigo, buscando en trabajos anteriores y guiarme de las indicaciones, al igual que investigando
 
 **Ahora que terminé, ¿qué cambiaría de mi proceso?**
-_____
+Prestar más atención en la receta ya que es la base del main, y se me complico mas 
 
 **¿Qué fue lo más difícil y cómo lo resolví?**
-_____
+Ejecutar de receta a main, y la parte de agregar empates para que no aceptara numeros iguales
 
 **¿Qué pregunta me quedó sin responder?**
-_____
+ninguna
 
 **¿Qué fue más fácil para mí: la Práctica 3 (receta propia con un paso de ejemplo), la 4 (receta ajena) o esta (todo desde cero)? ¿Por qué?**
-_____
+La receta 4, ya que me guie del trabajo o al igual la practica 3, esta practica se me complico más 
 
 **¿Pensé en los empates antes de programar o los descubrí al probar?**
-_____
+No lo habia pensado, hasta que lei el readme, y al momento de programar alli se me dificulto un poco
 
 ## 14. Lista de verificación antes de entregar (Fase 5)
 
