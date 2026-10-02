@@ -32,35 +32,35 @@ Uso leerDecimal, porque acepta enteros y decimales, que aparecen en los casos de
 - Se permiten valores positivos, negativos y decimales.
 
 **¿Hace falta validar el rango de los números (por ejemplo, rechazar el 0 o los negativos)? ¿Por qué?**
-puedo poner una restricción para que marqeu error con eso
+puedo poner una restricción para que marque error con eso
 
 **¿Qué hace mi programa cuando dos números son iguales y son los mayores? ¿Y cuando los tres son iguales?**
-Muestra el valor mayor. Si dos números empatan en el mayor, muestra ese valor una sola vez; si los tres son iguales, muestra ese mismo valor.
+Si dos números son iguales, va a maracar error y que ingrese otro valor
 
 **¿Quién detecta cada error?** (¿qué revisa la función de `utilerias.h` y qué reviso yo?)
 leerDecimal detecta texto, entradas y números que no puede convertir, y vuelve a pedir el dato. 
 
 **Invariante** (justo antes de mostrar el resultado, ¿qué es seguro sobre el valor que voy a mostrar?):
-El valor que voy a mostrar es uno de los tres números ingresados y es mayor o igual que los otros dos.
+Se va a mostrar el número mayor de los 3 ingresados 
 
 ## 4. Casos resueltos a mano (Fase 1)
 
 | Caso | Número 1 | Número 2 | Número 3 | Mayor calculado a mano |
 |---|---|---|---|---|
-| 1 (el mayor en primera posición) | 8 | 5 | 3 | 8 |
-| 2 (el mayor en segunda posición) | 3 | 8 | 5 | 8 |
-| 3 (el mayor en tercera posición) | 3 | 5 | 8 | 8 |
-| 4 (con un empate) | 7 | 7 | 3 | 7 |
-| 5 (con negativos) | -4 | -1 | -9 | -1 |
+| 1 (el mayor en primera posición) | 8 | 5 | 3 | 8|
+| 2 (el mayor en segunda posición) | 3 | 8 | 5 | 8  |
+| 3 (el mayor en tercera posición) | 3 | 5 | 8 | 8  |
+| 4 (con un empate) | 7 | 7 | 3 | 7  |
+| 5 (con negativos) | -4| -1 | -9 | -1 |
 
 ## 5. Receta en pseudocódigo (Fase 2)
 <!-- Tu receta va en el archivo RECETA.md. Aquí solo responde las preguntas. -->
 
-**¿Probé mi receta a mano con mis 5 casos?** Sí/No
-**¿Tuve que corregirla? ¿Qué cambié?** 
-**¿Cuántas versiones de mi receta escribí hasta la final?** _____
+**¿Probé mi receta a mano con mis 5 casos?** Sí
+**¿Tuve que corregirla? ¿Qué cambié?** prestar más atención que queria poner en la receta y cambiar lo que no me ayudara 
+**¿Cuántas versiones de mi receta escribí hasta la final?** 3 versiones
 **¿Se me ocurrió otra forma de resolver el problema? ¿Cuál? ¿Por qué elegí la que usé?**
-_____
+revisar trabajos anteriores
 
 ## 6. Cómo compilar y ejecutar (Fase 3)
 
@@ -73,7 +73,11 @@ g++ -Wall -Wextra -std=c++17 main.cpp -o numero_mayor
 <!-- Pega aquí lo que muestra tu programa en pantalla con un caso de empate (por ejemplo 7, 7 y 3). -->
 
 ```
-_____
+Bienvenido a mi programa
+Escribe el primer número: 7
+Escribe el segundo número: 7
+Escribe el tercer número: 3
+Hay empate en el valor mayor. No se acepta.
 ```
 
 ## 8. De la receta al código (Fase 3)
